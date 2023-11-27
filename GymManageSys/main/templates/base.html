@@ -1,0 +1,112 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Title</title>-->
+<!--</head>-->
+<!--<body>-->
+
+<!--</body>-->
+<!--</html>-->
+<!doctype html>
+<html lang="en">
+<!--{% load static %}-->
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+	  <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" rel="stylesheet">
+<!--    <link href="{% static 'bootstrap.min.css' %}" rel="stylesheet" />-->
+    <!-- Bootstrap Icons -->
+	  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" integrity="sha384-4LISF5TTJX/fLmGSxO53rV4miRxdg84mZsxmO8Rx5jGtp/LbrixFETvWa5a6sESd" crossorigin="anonymous" rel="stylesheet">
+<!--    <link href="node_modules/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" type="text/css"  />-->
+    <!-- jquery -->
+	  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<!--    <script src="assets/jquery-3.6.0.min.js"></script>-->
+    <title>Home - Arnold GYM</title>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-warning ">
+	  <div class="container">
+	    <a class="navbar-brand" href="./">Arnold GYM</a>
+	    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+	      <span class="navbar-toggler-icon"></span>
+	    </button>
+	    <div class="collapse navbar-collapse " id="navbarNav">
+	      <ul class="navbar-nav ms-auto">
+	        <li class="nav-item">
+	          <a class="nav-link" aria-current="page" href="./">Home</a>
+	        </li>
+	        <li class="nav-item">
+	          <a class="nav-link" aria-current="page" href="{% url 'gallery' %}">Gallery</a>
+	        </li>
+	        <li class="nav-item">
+	          <a class="nav-link" href="{% url 'pricing' %}">Pricing</a>
+	        </li>
+	        <li class="nav-item">
+	          <a class="nav-link btn btn-sm btn-dark text-white" href="{% url 'enquiry' %}">Enquiry</a>
+	        </li>
+
+			  <li class="nav-item dropdown">
+<!--	          <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">-->
+<!--	            My Account-->
+<!--	          </a>-->
+
+				<div class="btn-group">
+				  <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					My Account
+				  </button>
+				  <div class="dropdown-menu">
+					<a class="dropdown-item" href="#">Profile</a>
+					<a class="dropdown-item" href="#">Settings</a>
+					<a class="dropdown-item" href="#">Logout</a>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="#">Logout</a>
+				  </div>
+				</div>
+
+<!--	          <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">-->
+<!--&lt;!&ndash;				  <li><a class="dropdown-item" href="#">Register</a></li>&ndash;&gt;-->
+<!--				  <li><a class="dropdown-item" href="login.php">Login</a></li>-->
+<!--				  <li><hr class="dropdown-divider"></li>-->
+<!--				  <li><a class="dropdown-item" href="#">Profile</a></li>-->
+<!--				  <li><a class="dropdown-item" href="#">Settings</a></li>-->
+<!--				  <li><a class="dropdown-item" href="#">Logout</a></li>-->
+<!--	          </ul>-->
+	        </li>
+
+
+
+
+		  </ul>
+	    </div>
+	  </div>
+	</nav>
+    <!-- Header End -->
+
+    {% block content %}
+
+
+
+    {% endblock %}
+
+    <!-- Footer Start -->
+    <footer class="container py-5">
+	    <p class="float-end"><a href="#">Back to top</a></p>
+	    <p>© 2017–2021 Arnold GYM, Inc. ·
+            <a href="{% url 'pagedetail' 2 %}">Privacy</a> ·
+            <a href="{% url 'pagedetail' 3 %}">Terms</a> .
+            <a href="{% url 'faq' %}">FAQ</a>
+			<a href="#">Contact Us</a>
+        </p>
+	  </footer>
+
+    <!-- Bootstrap Bundle -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<!--    <script src="{% static 'bootstrap.bundle.min.js' %}"></script>-->
+
+  </body>
+</html>
